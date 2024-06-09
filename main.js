@@ -57,7 +57,7 @@ function next() {
       currentSection = section5;
       nextSection = null;
       sectionEnable(section5);
-      break;
+        break;
     case currentSection == section5:
       endGame();
       break;
@@ -143,6 +143,7 @@ function processGuess(guess) {
       winMessage();
       sectionEnable(false);
     }
+    return;
   }
 
   for (let i = 0; i <= 3; i++) {
@@ -155,6 +156,7 @@ function processGuess(guess) {
     }
   }
 
+  
   next();
 }
 
@@ -203,6 +205,6 @@ function looseMessage() {
   parent.appendChild(div);
 }
 
-function playAgain() {
+function playagain() {
   window.location.reload();
 }
